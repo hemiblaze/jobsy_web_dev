@@ -9,7 +9,8 @@
 .main_container {
     height: auto;
     width: 80%;
-    background: url('images/jobsy_banner.jpg');
+    /* background: url('images/jobsy_banner.jpg'); */
+    background: #a0f3f3;
     margin: 0 10%;
     /* border-width: 10px;
     border-color: #330242;
@@ -24,6 +25,7 @@
 .header{
     height: 80px;
     background: #fdffb6;
+    background-image: linear-gradient(#fdcca0 , #fdffb6);
     padding: 20px;
     font-size: 30px;
     position: fixed;
@@ -31,14 +33,24 @@
     width: calc(80% - 40px);
 }
 .main {
-    height: 800px;
+    /* min-height: 800px; */
+    height: auto; 
     width: 100%;
     color: #ef476f;
     margin-top: 120px;
+    clear: both;
 }
+/* .main:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0px;
+    visibility: hidden;
+} */
 .main_left {
-    height: 100%;
-    width: calc(75% - 21px);
+    /* min-height: 100%; */
+    /* height: 100%; */
+    width: calc(75% - 25px);
     float: left;
     background: #caffbf;
     padding-right: 20px;
@@ -49,17 +61,23 @@
     /* text-align: center; */
     font-size: 20px;
     line-height: 30px;
+    color: rgb(3, 56, 56);
     /* text-transform: uppercase; */
     /* text-decoration: underline; */
 }
+.overflow-content {
+    color: rgb(230, 44, 220) !important;
+}
+
 .main_left div, .main_right div {
     margin: 20px;
 }
 .main_right {
-    height: 100%;
+    /* min-height: 100%; */
+    /* height: 100%; */
     width: 25%;
     float: right;
-    background: #caffbf;
+    /* background: #caffbf; */
 }
 .main_right a {
     color: #ef476f;
@@ -82,6 +100,7 @@
     background: #ffc6ff;
     padding: 20px;
     text-align: center;
+    clear: both;
 }
 .share-button {
     position: fixed;
@@ -96,6 +115,10 @@
     font-size:24px;
     color:#caffbf;
     text-shadow:2px 2px 4px #ef476f;
+}
+.share-icon-png {
+    width: 40px;
+    height: 40px;
 }
 
 .header span {
@@ -138,4 +161,50 @@
 
 .main_right section div a:first-child {
     font-size: 22px;
+}
+.box-one {
+    width: 22%;
+    float: left;
+    margin: 10px 5px!important;
+    background: white;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+
+
+@media only screen and (max-width:768px) {
+    .box-one {
+        width: 90%;
+    }
+    .main_left {
+        width: 100%;
+        padding-right: 0px;
+        border-right: 0px;
+    }
+    .main_right {
+        width: 100%;
+    }
+    .main_container {
+        width: 100%;
+        margin: 0%;
+    }
+    .header {
+        width: 100%;
+    }
+    .header span {
+        right: 50px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+    .box-one {
+        width: 45%;
+    }
+}
+
+@media only screen and (min-width:1024px) and (max-width:1300px) {
+    .box-one {
+        width: 45%;
+    }
 }
